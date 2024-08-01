@@ -1,0 +1,60 @@
+Manifest-Version: 1.0
+Main-Class: com.distribuida.Main
+Class-Path: helidon-integrations-cdi-datasource-hikaricp-4.0.11.jar heli
+ don-microprofile-server-4.0.11.jar jersey-media-json-binding-3.1.7.jar 
+ postgresql-42.7.2.jar consul-api-1.4.0.jar helidon-integrations-cdi-hib
+ ernate-4.0.11.jar hibernate-core-6.4.4.Final.jar jakarta.persistence-ap
+ i-3.1.0.jar helidon-integrations-cdi-jta-weld-4.0.11.jar weld-jta-5.1.1
+ .SP2.jar helidon-integrations-cdi-jta-4.0.11.jar narayana-jta-7.0.0.Fin
+ al.jar jboss-transaction-spi-8.0.0.Final.jar jakarta.resource-api-2.0.0
+ .jar jakarta.ejb-api-4.0.1.jar jakarta.transaction-api-2.0.1.jar helido
+ n-integrations-cdi-jpa-4.0.11.jar helidon-microprofile-cdi-4.0.11.jar h
+ elidon-webserver-observe-4.0.11.jar helidon-webserver-static-content-4.
+ 0.11.jar helidon-webserver-context-4.0.11.jar helidon-webserver-cors-4.
+ 0.11.jar helidon-webserver-4.0.11.jar helidon-4.0.11.jar helidon-jersey
+ -server-4.0.11.jar helidon-jersey-media-jsonp-4.0.11.jar helidon-microp
+ rofile-config-4.0.11.jar helidon-config-yaml-mp-4.0.11.jar helidon-conf
+ ig-yaml-4.0.11.jar helidon-config-mp-4.0.11.jar helidon-config-encrypti
+ on-4.0.11.jar helidon-config-object-mapping-4.0.11.jar helidon-config-4
+ .0.11.jar weld-se-core-4.0.11.jar helidon-http-media-jsonp-4.0.11.jar h
+ elidon-http-media-4.0.11.jar helidon-http-encoding-4.0.11.jar helidon-c
+ ors-4.0.11.jar helidon-http-4.0.11.jar helidon-common-tls-4.0.11.jar he
+ lidon-common-key-util-4.0.11.jar helidon-common-configurable-4.0.11.jar
+  helidon-common-socket-4.0.11.jar helidon-inject-api-4.0.11.jar helidon
+ -common-uri-4.0.11.jar helidon-common-types-4.0.11.jar helidon-builder-
+ api-4.0.11.jar helidon-common-context-4.0.11.jar helidon-common-feature
+ s-4.0.11.jar helidon-logging-common-4.0.11.jar helidon-common-config-4.
+ 0.11.jar helidon-common-media-type-4.0.11.jar helidon-common-parameters
+ -4.0.11.jar helidon-common-mapper-4.0.11.jar helidon-common-crypto-4.0.
+ 11.jar helidon-common-4.0.11.jar helidon-common-buffers-4.0.11.jar heli
+ don-common-security-4.0.11.jar helidon-common-task-4.0.11.jar helidon-c
+ ommon-features-api-4.0.11.jar helidon-integrations-cdi-datasource-4.0.1
+ 1.jar helidon-integrations-cdi-configurable-4.0.11.jar helidon-integrat
+ ions-cdi-reference-counted-context-4.0.11.jar helidon-integrations-cdi-
+ delegates-4.0.11.jar helidon-integrations-jta-jdbc-4.0.11.jar helidon-i
+ ntegrations-jdbc-4.0.11.jar jersey-server-3.1.7.jar jersey-hk2-3.1.7.ja
+ r jersey-media-json-processing-3.1.7.jar jersey-client-3.1.7.jar jersey
+ -common-3.1.7.jar jersey-weld2-se-3.1.7.jar jersey-cdi1x-3.1.7.jar jaxb
+ -runtime-4.0.3.jar jaxb-core-4.0.3.jar jaxb-impl-4.0.3.jar jaxb-core-4.
+ 0.3.jar jakarta.xml.bind-api-4.0.0.jar jakarta.ws.rs-api-3.1.0.jar weld
+ -lite-extension-translator-5.1.1.SP2.jar weld-spi-5.0.SP3.jar weld-api-
+ 5.0.SP3.jar jakarta.enterprise.cdi-api-4.0.1.jar jakarta.enterprise.lan
+ g-model-4.0.1.jar jakarta.el-api-5.0.1.jar jakarta.interceptor-api-2.1.
+ 0.jar jakarta.annotation-api-2.1.1.jar jakarta.inject-api-2.0.1.jar par
+ sson-1.1.5.jar jakarta.json-api-2.1.3.jar jakarta.json.bind-api-3.0.1.j
+ ar angus-activation-2.0.1.jar jakarta.activation-api-2.1.2.jar parsson-
+ media-1.1.5.jar yasson-3.0.3.jar snakeyaml-2.0.jar gson-2.9.0.jar byte-
+ buddy-1.14.14.jar microprofile-config-api-3.0.3.jar microprofile-reacti
+ ve-streams-operators-api-3.0.jar jandex-3.1.6.jar HikariCP-5.0.1.jar sl
+ f4j-api-2.0.9.jar jakarta.validation-api-3.0.2.jar weld-environment-com
+ mon-5.1.1.SP2.jar jboss-classfilewriter-1.3.0.Final.jar jboss-logging-3
+ .5.3.Final.jar reactive-streams-1.0.4.jar httpclient-4.5.5.jar commons-
+ logging-1.2.jar commons-codec-1.16.0.jar checker-qual-3.42.0.jar httpco
+ re-4.4.9.jar hibernate-commons-annotations-6.0.6.Final.jar classmate-1.
+ 5.1.jar antlr4-runtime-4.13.0.jar jboss-invocation-2.0.0.Final.jar osgi
+ -resource-locator-1.0.3.jar weld-core-impl-4.0.11.jar jboss-logging-pro
+ cessor-2.2.1.Final.jar hk2-locator-3.0.6.jar javassist-3.30.2-GA.jar tx
+ w2-4.0.3.jar istack-commons-runtime-4.1.2.jar jboss-logging-annotations
+ -2.2.1.Final.jar jdeparser-2.0.3.Final.jar hk2-api-3.0.6.jar aopallianc
+ e-repackaged-3.0.6.jar hk2-utils-3.0.6.jar
+

@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-author
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-author
+  template:
+    metadata:
+      labels:
+        app: app-author
+    spec:
+      containers:
+        - name: app-author
+          image: kevinchiguano/app-authors
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /health/live
+            initialDelaySeconds: 20
+            periodSeconds: 5
+          env:
+            - name: JAVAX_SQL_DATASOURCE_MAIN_USERNAME
+              value: distribuida_trabajo_user
+            - name: JAVAX_SQL_DATASOURCE_MAIN_PASSWORD
+              value: oNqlr16wxPI6IpyQKwvKSbZYB3iEPWXH
+            - name: JAVAX_SQL_DATASOURCE_MAIN_URL
+              value: jdbc:postgresql://dpg-cqg8435ds78s73ca6d10-a.oregon-postgres.render.com:5432/distribuida_trabajo
+            - name: SERVER_PORT
+              value: "8080"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-author-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: app-author
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+
+
+---
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-books
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-books
+  template:
+    metadata:
+      labels:
+        app: app-books
+    spec:
+      containers:
+        - name: app-books
+          image: kevinchiguano/app-books
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /health/live
+            initialDelaySeconds: 20
+            periodSeconds: 5
+          env:
+            - name: JAVAX_SQL_DATASOURCE_MAIN_USERNAME
+              value: distribuida_trabajo_user
+            - name: JAVAX_SQL_DATASOURCE_MAIN_PASSWORD
+              value: oNqlr16wxPI6IpyQKwvKSbZYB3iEPWXH
+            - name: JAVAX_SQL_DATASOURCE_MAIN_URL
+              value: jdbc:postgresql://dpg-cqg8435ds78s73ca6d10-a.oregon-postgres.render.com:5432/distribuida_trabajo
+            - name: SERVER_PORT
+              value: "8080"
+            - name: APP_AUTHORS_URL
+              value: http://app-author-service:8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-books-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: app-books
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
